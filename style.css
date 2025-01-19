@@ -1,0 +1,375 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+:root {
+  --white-color: #fff;
+  --dark-color: #000;
+}
+
+/* 共通部分 */
+html {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+
+body.dark-mode {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  transition: all .5s ease-in-out;
+}
+body.dark-mode #container {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  transition: all .5s ease-in-out;
+}
+
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+h1 {
+  font-family: 'Caveat', cursive;
+  padding-bottom: 80px;
+}
+
+/* header */
+header {
+  background-color: #DFDFDF;  
+  height: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+/* 画像１つ目 */
+.header-photo {
+  width: 40%;
+  height: auto;
+}
+.header-photo img {
+  width: 70%;
+  object-fit: cover;
+}
+
+/* 画像２つ目 */
+.logo {
+  width: 30%;
+}
+.logo img {
+  width: 70%;
+}
+
+
+
+/* container */
+#container {
+  margin-right: 20%;
+  margin-left: 5%;
+  padding: 0;
+  display: flex;
+}
+
+
+
+/* about */
+
+.theme-toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 5%;
+  right: 3%;
+  font-size: 2rem;
+}
+
+.name {
+  font-size: 1.3rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding-bottom: 30px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border-bottom: solid 1px #333;
+  text-align: center;
+  padding-bottom: 3px;
+  margin-bottom: 20px;
+  width: 130px;
+}
+
+.text {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding: 0 0 3px 50px;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 0;
+}
+
+.contents3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contents2 {
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.introduce {
+  width: 50%;
+  padding-bottom: 100px;
+}
+
+.introduce-photo img {
+  width: 300px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.prospect {
+  width: 45%;
+}
+
+.hobby {
+  width: 45%;
+}
+
+/* skill */
+.skill {
+  padding-bottom: 100px;
+}
+.skills {
+  display: inline-block;
+}
+
+.skills a {
+  font-size: 80%;
+  display: block;
+  text-align: center;
+}
+
+
+/* works */
+.flex {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 50px;
+}
+
+.works-img a img{
+  width: 300px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.works-img a img:hover {
+  opacity: .6;
+}
+
+.works-text {
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* aside */
+.fixed-aside {
+  position: fixed;
+  top: 50%; 
+  right: 0; 
+  transform: translateY(-50%); /* 上方向に50%移動して中央に配置 */
+  padding: 10px;
+  z-index: 1; 
+}
+
+.aside {
+  padding: 0;
+}
+
+.aside li {
+  margin-bottom: 10px;
+}
+
+.aside li a {
+  font-size: 16px;
+}
+
+.aside li a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+/* footer */
+#footer {
+  background-color: #DFDFDF;
+  padding: 10px 5%;
+  color: #000;
+}
+
+
+.mail-address {
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.mail-address a {
+  font-size: 3rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px 0;
+}
+
+
+
+
+
+/* メディアクエリ */
+@media screen and (max-width:768px) {
+  
+    /* ヘッダー */
+    #header {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .header-photo {
+      width: 100%;
+    }
+
+    .header-photo img {
+      width: 100%;
+      height: auto;
+    }
+
+    .logo {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-top: 10px;
+    }
+
+    .logo img {
+      width: 40vw;
+    }
+
+
+    /* メイン */
+    #container {
+      margin: auto;
+      padding: 0;
+      display: flex;
+      width: 90%;
+    }
+    .section {
+      display: flex;
+      gap: 10px;
+    }
+    .text {
+      padding: 0;
+      margin: 0 auto;
+      width: 80%;
+      text-align: start;
+    }
+    .contents1 {
+      display: block;
+    }
+    .contents2 {
+      display: block;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    .contents3 {
+      display: block; 
+    }
+    .introduce {
+      padding: 0;
+      width: 100%;
+    }   
+    .introduce-photo img {
+      width: 28%;
+      height: auto;
+      position: absolute;
+      right: 5%;
+      top: -9%;
+      border-radius: 20%;
+    }
+    .prospect {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    .hobby {
+      width: 100%;
+    }
+
+
+
+    /* work */
+    .works-img {
+      padding-top: 30px;
+    }
+
+
+    /* skill */
+    .skill h1 {
+      padding: 0;
+    }
+    .skill .flex {
+      padding: 0;
+    }
+    .skills img {
+      width: 80%;
+      height: auto;
+    }
+    .skills a {
+      font-size: .5rem;
+    }
+
+
+
+
+    /* 実績 */
+    #works .flex{
+      display: block;
+      text-align: center;
+    }
+
+
+    /* aside */
+    .aside {
+      display: none;
+    }
+
+
+
+
+    /* フッター */
+    #contact h1 {
+      padding: 0;
+    }
+    .keitab {
+      font-size: 50%;
+    }
+}
